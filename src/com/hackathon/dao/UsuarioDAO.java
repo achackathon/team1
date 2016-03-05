@@ -13,6 +13,7 @@ public class UsuarioDAO {
 	private Connection conn;
 	private Statement stmt;	
 	
+	
 	public UsuarioDAO() throws SQLException {
 	    try {
 			conn = getConnection("jdbc:mysql://localhost:3306/webgotinha", "root", "");
@@ -23,6 +24,7 @@ public class UsuarioDAO {
 		
 	}
 	
+<<<<<<< 4b9b136efcc56c4c3fc8a1ba3badb651ddbdd6c3
     public boolean add(Usuario usuario) throws SQLException {
 		boolean result = stmt.execute("insert into Usuario values (" + usuario.getNome() + 
 				", " + usuario.getDataNasc() +
@@ -30,6 +32,14 @@ public class UsuarioDAO {
 				", " + usuario.getSexo() +
 				", " + usuario.getSenha() + ");");
 		return result;
+=======
+    public void add(Usuario usuario) throws SQLException {
+		stmt.execute("INSERT INTO USUARIO VALUES (" + usuario.getNome() + "," 
+					+ usuario.getSenha() + ","
+					+ usuario.getDataNasc() + ","
+					+ usuario.getEmail() + ","
+					+ usuario.getSexo() + ")");
+>>>>>>> Altera os DAO's
     }
 
     public List<Usuario> getUsuarios() throws SQLException {
