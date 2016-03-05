@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>WEB GOTINHA - Nova Vacina</title>
+	<title>WEB GOTINHA - Novo Cartão de Vacina </title>
 	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -13,13 +13,17 @@
 
 <body>
 	<div class="container">	
-		<h1 class="page-title text-center">Inserir Nova Vacina</h1>
+		<h1 class="page-title text-center">Inserir Novo Cartão de Vacina</h1>
 		<form class="form-insert">
 
 	        <label for="inputNome" class="sr-only">Nome</label>
-	        <input type="text" id="inputNome" class="form-control" placeholder="Nome da Vacina" required autofocus>
-	        <label for="inputNome" class="sr-only">Dose</label>
-	        <input type="text" id="inputNome" class="form-control" placeholder="Número de Doses" required>
+	        <input type="text" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
+	        <label for="inputTipo" class="sr-only">Tipo</label>
+	        <select class="form-control" id="inputTipo">
+	        	<option value="" disabled selected>Tipo</option>
+				<option value="h">Humano</option>
+				<option value="a">Animal</option>
+			</select>
 
 	        <a class="btn btn-lg btn-info btn-block" href="#">Cadastrar</a>
       	</form>
