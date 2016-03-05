@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema webGotinha
+-- Schema WebGotinha
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema webGotinha
+-- Schema WebGotinha
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `webGotinha` DEFAULT CHARACTER SET utf8 ;
-USE `webGotinha` ;
+CREATE SCHEMA IF NOT EXISTS `WebGotinha` DEFAULT CHARACTER SET utf8 ;
+USE `WebGotinha` ;
 
 -- -----------------------------------------------------
--- Table `webGotinha`.`Usuario`
+-- Table `WebGotinha`.`Usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `webGotinha`.`Usuario` (
+CREATE TABLE IF NOT EXISTS `WebGotinha`.`Usuario` (
   `idUsuario` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
   `senha` VARCHAR(45) NOT NULL,
@@ -29,9 +29,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `webGotinha`.`Vacina`
+-- Table `WebGotinha`.`Vacina`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `webGotinha`.`Vacina` (
+CREATE TABLE IF NOT EXISTS `WebGotinha`.`Vacina` (
   `idVacina` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
   `dose` VARCHAR(45) NOT NULL,
@@ -41,9 +41,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `webGotinha`.`Cartao`
+-- Table `WebGotinha`.`Cartao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `webGotinha`.`Cartao` (
+CREATE TABLE IF NOT EXISTS `WebGotinha`.`Cartao` (
   `idCartao` INT NOT NULL AUTO_INCREMENT,
   `tipo` VARCHAR(45) NOT NULL,
   `nome` VARCHAR(50) NOT NULL,
@@ -52,30 +52,30 @@ CREATE TABLE IF NOT EXISTS `webGotinha`.`Cartao` (
   INDEX `fk_Cartao_Usuario1_idx` (`idUsuario` ASC),
   CONSTRAINT `fk_Cartao_Usuario1`
     FOREIGN KEY (`idUsuario`)
-    REFERENCES `webGotinha`.`Usuario` (`idUsuario`)
+    REFERENCES `WebGotinha`.`Usuario` (`idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `webGotinha`.`VacinaCartao`
+-- Table `WebGotinha`.`VacinaCartao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `webGotinha`.`VacinaCartao` (
+CREATE TABLE IF NOT EXISTS `WebGotinha`.`VacinaCartao` (
   `data` DATE NOT NULL,
-  `Cartao_idCartao` INT NOT NULL,
-  `Cartao_idUsuario` INT NOT NULL,
-  `Vacina_idVacina` INT NOT NULL,
-  PRIMARY KEY (`Cartao_idCartao`, `Cartao_idUsuario`, `Vacina_idVacina`),
-  INDEX `fk_vacinaCartao_Vacina1_idx` (`Vacina_idVacina` ASC),
+  `id_Cartao` INT NOT NULL,
+  `id_Usuario` INT NOT NULL,
+  `id_Vacina` INT NOT NULL,
+  PRIMARY KEY (`id_Cartao`, `id_Usuario`, `id_Vacina`),
+  INDEX `fk_vacinaCartao_Vacina1_idx` (`id_Vacina` ASC),
   CONSTRAINT `fk_vacinaCartao_Cartao1`
-    FOREIGN KEY (`Cartao_idCartao` , `Cartao_idUsuario`)
-    REFERENCES `webGotinha`.`Cartao` (`idCartao` , `idUsuario`)
+    FOREIGN KEY (`id_Cartao` , `id_Usuario`)
+    REFERENCES `WebGotinha`.`Cartao` (`idCartao` , `idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_vacinaCartao_Vacina1`
-    FOREIGN KEY (`Vacina_idVacina`)
-    REFERENCES `webGotinha`.`Vacina` (`idVacina`)
+    FOREIGN KEY (`id_Vacina`)
+    REFERENCES `WebGotinha`.`Vacina` (`idVacina`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
