@@ -1,0 +1,20 @@
+.form-insert{
+	max-width: 500px;
+	margin: auto;
+}
+
+.form-insert input, .form-insert a, .input-group, .form-insert select, .form-insert textarea{
+	margin: 15px 0 0 0;
+}
+
+.input-group input{
+	margin: 0;
+}
+
+.radio-inline input{
+	margin-top: 4px;
+}
+
+ .radio-inline{
+ 	margin-top: 15px !important;
+ }
