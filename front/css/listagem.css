@@ -10,7 +10,9 @@
 #header_list {
 	margin: 20px 0;
 }
-
+.btn-novo{
+	width: 100%;
+}
 .edit,.ver{
 	color: #54ACD2;
 	margin-left: 10px;
