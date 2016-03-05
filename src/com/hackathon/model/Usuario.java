@@ -1,11 +1,21 @@
-package com.hackathon.pojo;
+package com.hackathon.model;
 
+import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Usuario {
 	
+	@Id 
+	@GeneratedValue
 	private int idUsuario;
+	
 	private String nome;
+	private Date dataNasc;
 	private String email;
 	private char sexo;
 	private String senha;
@@ -29,30 +39,45 @@ public class Usuario {
 	public int getIdUsuario() {
 		return idUsuario;
 	}
+	
 	public void setIdUsuario(int idUsuario) {
 		this.idUsuario = idUsuario;
 	}
+	
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public Date getDataNasc() {
+		return dataNasc;
+	}
+
+	public void setDataNasc(Date dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
 	public String getEmail() {
 		return email;
 	}
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
 	public char getSexo() {
 		return sexo;
 	}
+	
 	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
+	
 	public String getSenha() {
 		return senha;
 	}
+	
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
