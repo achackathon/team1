@@ -59,22 +59,23 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `webGotinha`.`Vacina_has_Cartao`
+-- Table `webGotinha`.`VacinaCartao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `webGotinha`.`Vacina_has_Cartao` (
-  `id_vacina` INT NOT NULL,
-  `id_cartao` INT NOT NULL,
-  PRIMARY KEY (`id_vacina`, `id_cartao`),
-  INDEX `fk_Vacina_has_Cartao_Cartao1_idx` (`id_cartao` ASC),
-  INDEX `fk_Vacina_has_Cartao_Vacina_idx` (`id_vacina` ASC),
-  CONSTRAINT `fk_Vacina_has_Cartao_Vacina`
-    FOREIGN KEY (`id_vacina`)
-    REFERENCES `webGotinha`.`Vacina` (`idVacina`)
+CREATE TABLE IF NOT EXISTS `webGotinha`.`VacinaCartao` (
+  `data` DATE NOT NULL,
+  `Cartao_idCartao` INT NOT NULL,
+  `Cartao_idUsuario` INT NOT NULL,
+  `Vacina_idVacina` INT NOT NULL,
+  PRIMARY KEY (`Cartao_idCartao`, `Cartao_idUsuario`, `Vacina_idVacina`),
+  INDEX `fk_vacinaCartao_Vacina1_idx` (`Vacina_idVacina` ASC),
+  CONSTRAINT `fk_vacinaCartao_Cartao1`
+    FOREIGN KEY (`Cartao_idCartao` , `Cartao_idUsuario`)
+    REFERENCES `webGotinha`.`Cartao` (`idCartao` , `idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Vacina_has_Cartao_Cartao1`
-    FOREIGN KEY (`id_cartao`)
-    REFERENCES `webGotinha`.`Cartao` (`idCartao`)
+  CONSTRAINT `fk_vacinaCartao_Vacina1`
+    FOREIGN KEY (`Vacina_idVacina`)
+    REFERENCES `webGotinha`.`Vacina` (`idVacina`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
