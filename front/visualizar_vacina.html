@@ -2,13 +2,15 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>WEB GOTINHA - Novo Usuário</title>
+	<title>WEB GOTINHA - Editar Cartão Vacina</title>
 	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" href="css/principal.css">
 	<link rel="stylesheet" href="css/cadastro.css">
+	<link rel="stylesheet" href="css/editar.css">
+	<link rel="stylesheet" href="css/listagem.css">
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 </head>
 
@@ -18,28 +20,16 @@
 		<a href="index.html">Sair</a>	
 	</header>
 	<div class="container">	
-		<h1 class="page-title text-center">Inserir Novo Usuário</h1>
-		<form class="form-insert">
-
-	        <label for="inputNome" class="sr-only">Nome</label>
-	        <input type="text" id="inputNome" class="form-control" value="João Kleber" required autofocus>
-	        <label for="inputEmail" class="sr-only">E-mail</label>
-	        <input type="email" id="inputEmail" class="form-control" value="joaokleber@paratudo.com.br" required>
-	        <label class="radio-inline"><input type="radio" name="genero" value="m" checked> Masculino</label>
-	        <label class="radio-inline"><input type="radio" name="genero" value="f"> Feminino</label>
-	        	
-			<div class='input-group date' id='dateTimeNascimento'>
-	            <input type='text' class="form-control" value="15/10/1969" required/>
-	            <span class="input-group-addon">
-	                <span class="glyphicon glyphicon-calendar"></span>
-	            </span>
-           </div>
-	        <label for="inputPassword" class="sr-only">Senha</label>
-	        <input type="password" id="inputPassword" class="form-control" value="Sua Senha" required>
-
-	        <a class="btn btn-lg btn-success btn-block" href="listar_cartao.html">Cadastrar</a>
-      	</form>
-		
+		<h1 class="page-title text-center">Vacina contra Hepatite B</h1>
+		<div class="detalhe">
+			<p><strong>Última dose:</strong> <span class="ultima-dose">14/07/2015</span></p>
+	      	<p><strong>Próxima dose:</strong> <span class="proxima-dose">14/07/2020</span><p>
+	      	<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+	  	</div>
+				<!-- Fim Elemento Acordion -->			
+		<div class="voltar">
+			<a href="listar_cartao.html"><i class="fa fa-arrow-left"></i></a>
+		</div>
 	</div>
 <footer class="clearfix text-center">
 	<a href="http://avenuecode.com" target="_blank">
@@ -54,3 +44,4 @@
 
 </body>
 </html>
+

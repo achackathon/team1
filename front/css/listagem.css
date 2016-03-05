@@ -1,15 +1,4 @@
-#header{
-	background: #ddd;
-	padding: 0 50px;
-}
-#header p, #header a{
-	display: inline-block;
-	margin: 5px 0 5px 15px;
-}
 
-#header_list {
-	margin: 20px 0;
-}
 .btn-novo{
 	width: 100%;
 }
@@ -24,4 +13,21 @@
 }
 .vacinas-list{
 	list-style: none;
+}
+
+.btn-sm{
+	font-size: 14px;
+}
+.btn-sm i{
+	margin-right: 10px;
+}
+.detalhe{
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    border-top: 1px solid;
+}
+
+.page-title{
+	margin-bottom: 20px;
 }
