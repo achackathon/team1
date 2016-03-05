@@ -1,7 +1,6 @@
 package com.hackathon.model;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,13 +18,6 @@ public class Usuario {
 	private String email;
 	private char sexo;
 	private String senha;
-	public List<Vacina> vacinas;
-	
-	public void tomarVacina(int idUsuario, Vacina vacina){
-		//busca usuario no banco
-		Usuario usuario = new Usuario(1, "Marco", "marco@email.com", 'M', "senha");
-		usuario.vacinas.add(vacina);
-	}
 	
 	public Usuario(int idUsuario, String nome, String email, char sexo, String senha) {
 		super();

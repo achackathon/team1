@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.hackathon.model.Usuario;
@@ -50,11 +49,11 @@ public class UsuarioDAO {
     }
 
     public boolean update(Usuario usuario) throws SQLException {
-        boolean result = stmt.execute("update Usuario set (" + usuario.getNome() + 
-				", " + usuario.getDataNasc() +
-				", " + usuario.getEmail() +
-				", " + usuario.getSexo() +
-				", " + usuario.getSenha() + ") where idUsuario = " + usuario.getIdUsuario() + ";");
+        boolean result = stmt.execute("update Usuario set (nome = " + usuario.getNome() + 
+				", dataNasc = " + usuario.getDataNasc() +
+				", email = " + usuario.getEmail() +
+				", sexo = " + usuario.getSexo() +
+				", senha = " + usuario.getSenha() + ") where idUsuario = " + usuario.getIdUsuario() + ";");
         return result;
     }
 	
@@ -63,5 +62,4 @@ public class UsuarioDAO {
 		    Class.forName("com.mysql.jdbc.Driver");
 		    return DriverManager.getConnection(dbURL, user, password);
 	}
-
 }
