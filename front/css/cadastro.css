@@ -3,7 +3,7 @@
 	margin: auto;
 }
 
-.form-insert input, .form-insert a, .input-group, .form-insert select{
+.form-insert input, .form-insert a, .input-group, .form-insert select, .form-insert textarea{
 	margin: 15px 0 0 0;
 }
 

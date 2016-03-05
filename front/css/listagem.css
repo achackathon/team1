@@ -1,0 +1,8 @@
+#header{
+	background: #c0c0c0;
+	padding: 0 50px;
+}
+#header p, #header a{
+	display: inline-block;
+	margin: 5px 0 5px 15px;
+}
