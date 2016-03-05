@@ -11,8 +11,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `webgotinha` DEFAULT CHARACTER SET utf8 ;
-USE `webgotinha` ;
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Usuario`
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Vacina` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
   `dose` VARCHAR(45) NOT NULL,
+  `descricao` VARCHAR(155) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
