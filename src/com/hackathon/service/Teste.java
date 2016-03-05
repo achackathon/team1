@@ -7,9 +7,7 @@ import com.hackathon.dao.UsuarioDAO;
 public class Teste {
 	
 	public static void main(String [] args) throws SQLException{
-		UsuarioDAO usuario = new UsuarioDAO();
-		
-		usuario.add();
+		UsuarioDAO usuario = new UsuarioDAO();		
 	}
 
 }
