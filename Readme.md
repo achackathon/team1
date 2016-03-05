@@ -4,7 +4,8 @@ Esta aplicação contempla a solução de um problema enfrentado por muitas pess
 Este, apesar de nã parecer, é um importante documento e devemos mantê-lo sempre atualizado.
 
 ```bash
-É importante ressaltar que a vacina é a forma mais fácil de se proteger de uma doença, e é melhor do que se submeter a um tratamento para se curar.
+É importante ressaltar que a vacina é a forma mais fácil de se proteger de uma doença, 
+e é melhor do que se submeter a um tratamento para se curar.
 ```
 
 ### Instalação do ambiente
