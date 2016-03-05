@@ -32,6 +32,6 @@ $( document ).ready(function() {
 	  	adicionarVacinas(cartao, id);
 	  	id++;
 	  });
-	  
+	  $('.page-title').text('Vacinas de '+ resp.usuario);
 	});
 });

@@ -4,11 +4,12 @@ function criarCartao (cartao, id) {
 	var panelHeading = $('<div class="panel-heading clearfix"></div>');
 	var panelTitle = $('<h4 class="panel-title"></h4>');
 	var nomeCartao = $('<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+id+'" class="nome-cartao"></a>');
-	var buttons = $('<div class="pull-right"><a class="edit" href="#" title="Editar Cartão de Vacina"><i class="glyphicon glyphicon-pencil"></i></a><a class="remove" href="#" title="Remover Cartão de Vacina"><i class="glyphicon glyphicon-remove"></i></a></div>');
+	var buttons = $('<div class="pull-right"><a class="edit" href="editar_cartao.html" title="Editar Cartão de Vacina"><i class="glyphicon glyphicon-pencil"></i></a><a class="remove" href="#" title="Remover Cartão de Vacina"><i class="glyphicon glyphicon-remove"></i></a></div>');
 	var nome = cartao.nome;
 	var panelCollapse = $('<div id="collapse'+id+'" class="panel-collapse collapse in"></div>');
 	var panelBody = $('<div class="panel-body"></div>');
 	var list = $('<ul class="vacinas-list"></ul>');
+	var adicionarVacina = $('<a class="btn btn-sm btn-success" href="adicionar_vacina_cartao.html"><i class="glyphicon glyphicon-plus"></i>Adicionar Vacinas</a>')
 
 	$('.panel-group').append(panelDefault);
 	panelDefault.append(panelHeading);
@@ -19,9 +20,10 @@ function criarCartao (cartao, id) {
 	panelDefault.append(panelCollapse);
 	panelCollapse.append(panelBody);
 	panelBody.append(list);
+	panelBody.append(adicionarVacina);
 
 	 cartao.vacinas.forEach(function(vacina){
-	 	list.append('<li>'+vacina.nome+'<a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>');
+	 	list.append('<li>'+vacina.nome+'</li>');
 	 });
 
 
@@ -37,6 +39,6 @@ $( document ).ready(function() {
 	  	criarCartao(cartao, id);
 	  	id++;
 	  });
-	  
+	  $('.bem-vindo').text('Bem vindo, ' + resp.usuario + '!');
 	});
 });

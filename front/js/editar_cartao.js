@@ -16,6 +16,7 @@ $( document ).ready(function() {
 	  	ediarCartao(cartao, id);
 	  	id++;
 	  });
+	  $('.titulo').text('Cartão de vacina de ' + resp.usuario);
 	  
 	});
 });

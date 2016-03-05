@@ -25,3 +25,7 @@
 .vacinas-list{
 	list-style: none;
 }
+
+.panel-body a i{
+	margin-right: 10px;
+}
