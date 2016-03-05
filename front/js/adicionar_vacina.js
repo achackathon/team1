@@ -4,7 +4,7 @@ function adicionarVacinas (cartao, id) {
 	var panelHeading = $('<div class="panel-heading clearfix"></div>');
 	var panelTitle = $('<h4 class="panel-title"></h4>');
 	var nomeCartao = $('<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+id+'" class="nome-cartao"></a>');
-	var buttons = $('<div class="pull-right"><a class="edit" href="#" title="Editar Cartão de Vacina"><i class="glyphicon glyphicon-pencil"></i></a><a class="remove" href="#" title="Remover Cartão de Vacina"><i class="glyphicon glyphicon-remove"></i></a></div>');
+	var buttons = $('<div class="pull-right"><a class="remove" href="#" title="Remover Cartão de Vacina"><i class="glyphicon glyphicon-remove"></i></a></div>');
 	var nome = cartao.nome;
 	var panelCollapse = $('<div id="collapse'+id+'" class="panel-collapse collapse"></div>');
 	var panelBody = $('<div class="panel-body"></div>');
