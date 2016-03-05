@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>WEB GOTINHA - Editar Cartão Vacina</title>
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="css/principal.css">
+	<link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+	<div class="container">	
+		<h1 class="page-title text-center">Cadastrar Vacina no Cartão</h1>
+		<form class="form-insert">
+	        <select class="form-control" id="inputTipo" required>
+	        	<option value="" disabled selected>Nome da Vacina</option>
+				    <option>Vacina contra Hepatite B</option>
+				    <option>Vacina Tetravalente</option>
+				    <option>Vacina contra Pneumococos</option>
+				    <option>Tríplice Viral</option>
+				    <option>Vacina Oral contra a Pólio</option>
+				    <option>Vacina Tríplice Bacteriana</option>
+				    <option>Vacina contra Meningococo C</option>
+				 	</select>
+	        <div class='input-group date' id='dateTimeNascimento'>
+            <input type='text' class="form-control" placeholder="Data de Vacinação" required/>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+         	</div>
+
+	        <a class="btn btn-lg btn-info btn-block" href="#">Cadastrar</a>
+      	</form>
+		
+	</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/cadastro.js"></script>
+
+</body>
+</html>
