@@ -9,14 +9,12 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" href="css/principal.css">
 	<link rel="stylesheet" href="css/cadastro.css">
-	<link rel="stylesheet" href="css/novo_cartao.css">
 </head>
 
 <body>
 	<div class="container">	
 		<h1 class="page-title text-center">Inserir Novo Cartão de Vacina</h1>
-		<div class="col-md-6">
-			<form class="form-insert">
+		<form class="form-insert">
 
 	        <label for="inputNome" class="sr-only">Nome</label>
 	        <input type="text" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
@@ -27,12 +25,9 @@
 				<option value="a">Animal</option>
 			</select>
 
-	        <a class="btn btn-lg btn-success btn-block" href="listar_cartao.html">Cadastrar</a>
+	        <a class="btn btn-lg btn-info btn-block" href="#">Cadastrar</a>
       	</form>
-		</div>
-		<div class="col-md-6">
-			<div class="panel-group" id="accordion"></div>
-		</div>
+		
 	</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
@@ -40,7 +35,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment-with-locales.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/cadastro.js"></script>
-<script src="js/listar_cartao.js"></script>
 
 </body>
 </html>

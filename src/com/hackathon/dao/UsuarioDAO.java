@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.hackathon.model.Usuario;
@@ -13,6 +12,7 @@ public class UsuarioDAO {
 	
 	private Connection conn;
 	private Statement stmt;	
+	
 	
 	public UsuarioDAO() throws SQLException {
 	    try {
@@ -24,6 +24,7 @@ public class UsuarioDAO {
 		
 	}
 	
+<<<<<<< 4b9b136efcc56c4c3fc8a1ba3badb651ddbdd6c3
     public boolean add(Usuario usuario) throws SQLException {
 		boolean result = stmt.execute("insert into Usuario values (" + usuario.getNome() + 
 				", " + usuario.getDataNasc() +
@@ -31,6 +32,14 @@ public class UsuarioDAO {
 				", " + usuario.getSexo() +
 				", " + usuario.getSenha() + ");");
 		return result;
+=======
+    public void add(Usuario usuario) throws SQLException {
+		stmt.execute("INSERT INTO USUARIO VALUES (" + usuario.getNome() + "," 
+					+ usuario.getSenha() + ","
+					+ usuario.getDataNasc() + ","
+					+ usuario.getEmail() + ","
+					+ usuario.getSexo() + ")");
+>>>>>>> Altera os DAO's
     }
 
     public List<Usuario> getUsuarios() throws SQLException {
@@ -50,11 +59,11 @@ public class UsuarioDAO {
     }
 
     public boolean update(Usuario usuario) throws SQLException {
-        boolean result = stmt.execute("update Usuario set (" + usuario.getNome() + 
-				", " + usuario.getDataNasc() +
-				", " + usuario.getEmail() +
-				", " + usuario.getSexo() +
-				", " + usuario.getSenha() + ") where idUsuario = " + usuario.getIdUsuario() + ";");
+        boolean result = stmt.execute("update Usuario set (nome = " + usuario.getNome() + 
+				", dataNasc = " + usuario.getDataNasc() +
+				", email = " + usuario.getEmail() +
+				", sexo = " + usuario.getSexo() +
+				", senha = " + usuario.getSenha() + ") where idUsuario = " + usuario.getIdUsuario() + ";");
         return result;
     }
 	
@@ -63,5 +72,4 @@ public class UsuarioDAO {
 		    Class.forName("com.mysql.jdbc.Driver");
 		    return DriverManager.getConnection(dbURL, user, password);
 	}
-
 }

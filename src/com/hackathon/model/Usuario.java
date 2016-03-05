@@ -1,7 +1,7 @@
 package com.hackathon.model;
 
+import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,19 +15,26 @@ public class Usuario {
 	private int idUsuario;
 	
 	private String nome;
-	private Date dataNasc;
+	private Calendar dataNasc;
 	private String email;
-	private char sexo;
+	private String sexo;
 	private String senha;
+<<<<<<< 4b9b136efcc56c4c3fc8a1ba3badb651ddbdd6c3
+=======
 	public List<Vacina> vacinas;
 	
 	public void tomarVacina(int idUsuario, Vacina vacina){
 		//busca usuario no banco
-		Usuario usuario = new Usuario(1, "Marco", "marco@email.com", 'M', "senha");
+		Usuario usuario = new Usuario(1, "Marco", "marco@email.com", "M", "senha");
 		usuario.vacinas.add(vacina);
 	}
+>>>>>>> Altera os DAO's
 	
-	public Usuario(int idUsuario, String nome, String email, char sexo, String senha) {
+	public Usuario() {
+		super();
+	}
+
+	public Usuario(int idUsuario, String nome, String email, String sexo, String senha) {
 		super();
 		this.idUsuario = idUsuario;
 		this.nome = nome;
@@ -51,12 +58,20 @@ public class Usuario {
 		this.nome = nome;
 	}
 	
-	public Date getDataNasc() {
+	public Calendar getDataNasc() {
 		return dataNasc;
 	}
 
-	public void setDataNasc(Date dataNasc) {
+	public void setDataNasc(Calendar dataNasc) {
 		this.dataNasc = dataNasc;
+	}
+
+	public List<Vacina> getVacinas() {
+		return vacinas;
+	}
+
+	public void setVacinas(List<Vacina> vacinas) {
+		this.vacinas = vacinas;
 	}
 
 	public String getEmail() {
@@ -65,13 +80,6 @@ public class Usuario {
 	
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public char getSexo() {
-		return sexo;
-	}
-	
-	public void setSexo(char sexo) {
-		this.sexo = sexo;
 	}
 	
 	public String getSenha() {
@@ -82,4 +90,12 @@ public class Usuario {
 		this.senha = senha;
 	}
 
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	
 }
