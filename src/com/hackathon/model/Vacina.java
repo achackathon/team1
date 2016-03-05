@@ -1,4 +1,4 @@
-package com.hackathon.pojo;
+package com.hackathon.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

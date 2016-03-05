@@ -1,4 +1,4 @@
-package com.hackathon.pojo;
+package com.hackathon.model;
 
 public enum Tipo {
 	Humano, Animal;

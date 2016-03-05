@@ -15,7 +15,7 @@ public class Conexao {
     ResultSet rs = stmt.executeQuery("SELECT * FROM TESTE");
     while(rs.next()){
     System.out.println(rs.getString("name"));
-    
+    	
     }
     conn.close();
   }

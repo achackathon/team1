@@ -1,4 +1,4 @@
-package com.hackathon.pojo;
+package com.hackathon.model;
 
 import java.util.Date;
 import java.util.List;
