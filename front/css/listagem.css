@@ -1,8 +1,25 @@
 #header{
-	background: #c0c0c0;
+	background: #ddd;
 	padding: 0 50px;
 }
 #header p, #header a{
 	display: inline-block;
 	margin: 5px 0 5px 15px;
+}
+
+#header_list {
+	margin: 20px 0;
+}
+
+.edit,.ver{
+	color: #54ACD2;
+	margin-left: 10px;
+}
+
+.remove{
+	color: #B8312F;
+	margin-left: 15px;
+}
+.vacinas-list{
+	list-style: none;
 }
