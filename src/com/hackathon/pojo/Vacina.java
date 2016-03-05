@@ -1,7 +1,14 @@
 package com.hackathon.pojo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Vacina {
 	
+	@Id 
+	@GeneratedValue
 	private int idVacina;
 	private String nome;
 	private String dose;
