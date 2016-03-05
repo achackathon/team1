@@ -13,11 +13,93 @@
 
 <body>
 	<header id="header" class="text-right">
-		<p>Bem vindo, Fulano(a)</p> 
+		<p>Bem vindo, Fulano(a)!</p> 
 		<a href="#">Sair</a>
 	</header>
 	<div class="container">	
-
+		<header id="header_list" class="clearfix">
+			<div class="col-md-2 col-sm-12">
+				<a href="novo_cartao.html" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus"></i>  Cartão de Vacinas</a>					
+			</div>
+			<div class="input-group col-md-10 col-sm-12">
+		      <input type="text" class="form-control" placeholder="Pesquisar Cartão de Vacinas">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+		      </span>
+		    </div>			
+		</header>
+		
+		<div class="panel-group" id="accordion">
+		<!-- Elemento Acordion -->
+		  <div class="panel panel-default">
+		    <div class="panel-heading clearfix">
+		      <h4 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+		        João Kleber</a>
+		        <div class="pull-right">
+		        	<a class="edit" href="#" title="Editar Cartão de Vacina"><i class="glyphicon glyphicon-pencil"></i></a>
+		        	<a class="remove" href="#" title="Remover Cartão de Vacina"><i class="glyphicon glyphicon-remove"></i></a>
+		        </div>
+		      </h4>
+		    </div>
+		    <div id="collapse1" class="panel-collapse collapse in">
+		      <div class="panel-body">
+		      	<ul class="vacinas-list">
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	</ul>
+		      </div>
+		    </div>
+		  </div>
+		<!-- Fim Elemento Acordion -->
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+		        Félix</a>
+		        <div class="pull-right">
+		        	<a class="edit" href="#" title="Editar Cartão de Vacina"><i class="glyphicon glyphicon-pencil"></i></a>
+		        	<a class="remove" href="#" title="Remover Cartão de Vacina"><i class="glyphicon glyphicon-remove"></i></a>
+		        </div>
+		      </h4>
+		    </div>
+		    <div id="collapse2" class="panel-collapse collapse">
+		      <div class="panel-body">
+		      	<ul class="vacinas-list">
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	</ul>
+		      </div>
+		    </div>
+		  </div>
+  		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+		        Pateta</a>
+		        <div class="pull-right">
+		        	<a class="edit" href="#" title="Editar Cartão de Vacina"><i class="glyphicon glyphicon-pencil"></i></a>
+		        	<a class="remove" href="#" title="Remover Cartão de Vacina"><i class="glyphicon glyphicon-remove"></i></a>
+		        </div>
+		      </h4>
+		    </div>
+		    <div id="collapse3" class="panel-collapse collapse">
+		      <div class="panel-body">
+		      	<ul class="vacinas-list">
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	    <li>Lorem Ipsum <a href="#" title="Ver detalhes"><i class="glyphicon glyphicon-eye-open ver"></i></a></li>
+		      	</ul>
+		      </div>
+		    </div>
+		  </div>
+  		  
+		</div>
 	</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
